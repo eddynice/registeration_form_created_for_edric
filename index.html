@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Personal Information Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: rgb(240 242 245);
+            background-image: url();
+            background-image: url(https://wallpapers.com/images/featured/dh3ommnxthw4nln7.jpg);
+        }
+        
+        .osazee {
+            margin: 10px auto !important;
+        }
+        
+        .container {
+            padding: 20px;
+            width: 50%;
+            box-shadow: 5px;
+            background-color: rgb(240 242 245);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+        }
+        
+        .row {
+            margin-bottom: 30px;
+            margin-top: 30;
+        }
+        
+        .form-select {
+            padding: 10px;
+        }
+        
+        @media screen and (max-width:768px) {
+            .container {
+                width: 98%;
+            }
+        }
+        
+        .form-group {
+            border-bottom: #4b1010;
+        }
+        
+        .image-upload {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+            margin: 10px auto 0px auto;
+            overflow-y: hidden;
+            position: relative;
+            background: #4b1010;
+        }
+        
+        .image-upload>input {
+            display: none;
+        }
+        
+        .image-upload i {
+            width: 70px;
+            cursor: pointer;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            color: var(--white);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="osazee ">
+        <div class="container ">
+
+            <h3>Personal Information</h3>
+            <form id="personalInfoForm ">
+                <div class="form-row">
+                    <div class="form-group col">
+
+                        <label for="surname ">Surname:</label>
+                        <input type="text " class="form-control " id="surname " required>
+                    </div>
+                    <div class="form-group col">
+                        <label for="photo" class="form-label">Upload Photo:</label>
+                        <input type="file" class="form-control form-control-sm" id="photo">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="firstname ">First Name:</label>
+                    <input type="text " class="form-control " id="firstname " required>
+                </div>
+                <div class="form-group ">
+                    <label for="middlename ">Middle Name:</label>
+                    <input type="text " class="form-control " id="middlename ">
+                </div>
+                <div class="form-group ">
+                    <label for="address ">Address:</label>
+                    <input type="text " class="form-control " id="address " required>
+                </div>
+                <div class="form-group ">
+                    <label for="phone ">Phone Number:</label>
+                    <input type="tel " class="form-control " id="phone " pattern="[0-9]{10} " required>
+                    <small class="form-text text-muted ">Please enter a 10-digit phone number.</small>
+                </div>
+
+                <div class="row ">
+                    <div class="form-group col ">
+                        <label for="email ">Email:</label>
+                        <input type="email " class="form-control " id="email " required>
+                    </div>
+                    <div class="form-group col ">
+                        <label for="email ">state of origin:</label>
+                        <input type="email " class="form-control " id="email " required>
+                    </div>
+                    <div class="form-group col ">
+                        <label for="email ">local govt:</label>
+                        <input type="email " class="form-control " id="email " required>
+                    </div>
+                    <div class="form-group col ">
+                        <label for="exampleDataList " class="form-label ">Religion</label>
+                        <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="Type to search... ">
+                        <datalist id="datalistOptions ">
+      <option value="christian ">
+      <option value="muslin ">
+      <option value="others ">
+    
+    </datalist>
+                    </div>
+
+                </div>
+                <div>
+                    <h3 style="text-align: right;">course selection </h3>
+                    <div class="d-flex justify-content-end align-items-center">
+
+                        <div class="form-group col-md-4 col">
+                            <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">first choice</option>
+                        <option value="saab">second choice</option>
+                       
+                          </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <h3>Next of Kin</h3>
+
+                <div class="form-group ">
+                    <label for="kinName ">Name:</label>
+                    <input type="text " class="form-control " id="kinName " required>
+                </div>
+                <div class="form-group ">
+                    <label for="kinPhone ">Phone Number:</label>
+                    <input type="tel " class="form-control " id="kinPhone " pattern="[0-9]{10} " required>
+                    <small class="form-text text-muted ">Please enter a 10-digit phone number.</small>
+                </div>
+                <div class="form-group ">
+                    <label for="kinRelationship ">Relationship:</label>
+                    <input type="text " class="form-control " id="kinRelationship " required>
+                </div>
+                <div class="form-group ">
+                    <label for="kinName ">Address:</label>
+                    <input type="text " class="form-control " id="Address " required>
+                </div>
+                <h3>School attended</h3>
+
+                <div class="form-row ">
+                    <div class="form-group col ">
+                        <label for="schoolAttended ">School Attended:</label>
+                        <input type="text " class="form-control " id="schoolAttended " required>
+                    </div>
+                    <div class="form-group col ">
+                        <label for="schoolAttended ">School Address:</label>
+                        <input type="text " class="form-control " id="schoolAttended " required>
+                    </div>
+                    <div class="form-group col ">
+                        <label for="dateAttended ">Date:</label>
+                        <input type="date" class="form-control " id="dateAttended " required>
+                    </div>
+                </div>
+                <h3>O-Level Result</h3>
+                <h5>First seating</h5>
+
+                <div class="row mt-0">
+                    <div class="form-group col-md-4  col">
+                        <label>Examination Type</label>
+                        <input class="form-control " id="exampleDataList " placeholder="waec.. ">
+                        <datalist id="datalistOptions ">
+                                <option value="WAEC ">
+                                 <option value="NECO ">
+                                 <option value="NABTEB ">
+    
+                             </datalist>
+                    </div>
+                    <div class="form-group col-md-4 col">
+                        <label>Examination Year</label>
+                        <input type="date" class="form-control " id="exampleDataList ">
+
+                    </div>
+                    <div class="form-group col-md-4 col ">
+                        <label>Examination Month</label>
+                        <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="Type to search... ">
+                        <datalist id="datalistOptions ">
+                        <option value="WAEC ">
+                         <option value="NECO ">
+                         <option value="NABTEB ">
+
+                     </datalist>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="col-md-4">
+                        <label for="">Exam number</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number " class="form-control " id="dateAttended " required>
+                    </div>
+
+                </div>
+                <div class="row ">
+                    <div class="form-group col-md-3 col ">
+
+                        <label for="">Result obtained</label>
+
+                    </div>
+                    <div class="form-group col-md-7 col ">
+                        <label for="">Subject</label>
+                        <div class=" ">
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                                    <option value="audi">Civil</option>
+                                    <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">Geograhy</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                                <option value="audi">English</option>
+                                <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-md-2 col ">
+                        <label for="">Grade</label>
+                        <div class="form-group p-0">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group col p-0">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group col">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+                <h5>second seating</h5>
+
+                <div class="row mt-0">
+                    <div class="form-group col-md-4  col">
+                        <label>Examination Type</label>
+                        <input class="form-control " id="exampleDataList " placeholder="waec.. ">
+                        <datalist id="datalistOptions ">
+                                <option value="WAEC ">
+                                 <option value="NECO ">
+                                 <option value="NABTEB ">
+    
+                             </datalist>
+                    </div>
+                    <div class="form-group col-md-4 col">
+                        <label>Examination Year</label>
+                        <input type="date" class="form-control " id="exampleDataList ">
+
+                    </div>
+                    <div class="form-group col-md-4 col ">
+                        <label>Examination Month</label>
+                        <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="Type to search... ">
+                        <datalist id="datalistOptions ">
+                        <option value="WAEC ">
+                         <option value="NECO ">
+                         <option value="NABTEB ">
+
+                     </datalist>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="col-md-4">
+                        <label for="">Exam number</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number " class="form-control " id="dateAttended " required>
+                    </div>
+
+                </div>
+                <div class="row ">
+                    <div class="form-group col-md-3 col ">
+
+                        <label for="">Result obtained</label>
+
+                    </div>
+                    <div class="form-group col-md-7 col ">
+                        <label for="">Subject</label>
+                        <div class=" ">
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                                    <option value="audi">Civil</option>
+                                    <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">Geograhy</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                                <option value="audi">English</option>
+                                <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                            <div class="form-group col-md-12 col">
+
+                                <select id="" name="carlist" class="form-select" aria-label="Default select example">
+                        <option value="Agric">mathematics</option>
+                        <option value="saab">physic</option>
+                       <option value="opel">biology</option>
+                        <option value="audi">Economics</option>
+                          </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-md-2 col ">
+                        <label for="">Grade</label>
+                        <div class="form-group p-0">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group col p-0">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group col">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " list="datalistOptions " id="exampleDataList " placeholder="A1 ">
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+                <div class="position-relative">
+                    <button type="button" class="btn btn-info position-absolute bottom-0 end-50">Print</button>
+                    <button type="button" class="btn btn-info position-absolute bottom-0 end-0">Upload</button>
+                </div>
+
+
+
+
+
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
+
+<script>
+    // Handle form submission
+    document.getElementById('personalInfoForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Retrieve form values
+        var surname = document.getElementById('surname').value;
+        var firstname = document.getElementById('firstname').value;
+        var middlename = document.getElementById('middlename').value;
+        var address = document.getElementById('address').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
+        var state = document.getElementById('state').value;
+
+        // Display the submitted data
+        console.log('Surname:', surname);
+        console.log('First Name:', firstname);
+        console.log('Middle Name:', middlename);
+        console.log('Address:', address);
+        console.log('Phone Number:', phone);
+        console.log('Email:', email);
+        console.log('State of Origin:', state);
+
+        // You can perform further actions with the form data here, such as sending it to a server
+        // using AJAX or saving it to a database.
+
+        // Clear the form inputs
+        //document.getElementById('personalInfoForm').reset(); <
+
+    })
+</script>
+
+
+</html>
